@@ -1,3 +1,12 @@
+
+
+IMPLEMENTANDO FUNCIONALIDADE DE "TROCA DE SENHA" (PYTHON/DJANGO)
+https://www.youtube.com/watch?v=JrNMBj12H4Y&t=308s
+
+IMPLEMENTANDO "ESQUECI/RESETAR SENHA" (PYTHON/DJANGO)
+https://www.youtube.com/watch?v=lVbozsNX9ow
+
+
 1ª - Dentro do terrminal Studio Visial code
 	* Só a primeira vez para criar o arquivo venv
 		> python -m venv venv			== instalar o arquivo venv

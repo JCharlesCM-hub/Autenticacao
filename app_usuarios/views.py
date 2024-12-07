@@ -43,3 +43,13 @@ def login(request):
 @login_required(login_url="/auth/login")
 def plataforma(request):
     return HttpResponse('Você estar logado..')
+
+# class PasswordChangeDoneView(PasswordContextMixin, TemplateView):
+class PasswordChangeDoneView():
+    template_name = "registration/password_charge_done.html"
+    title = ("Password  change successful")
+
+    # @method_decorator(login_required)
+    # def dispatch(self, *args. **kwargs):
+    #    return super().dispatch(*args, **kwargs)
+    
