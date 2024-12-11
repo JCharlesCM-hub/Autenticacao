@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import PasswordResetView
+from django.urls import reverse_lazy
+from app_usuarios.forms import CustomPasswordResetForm
 
 # Create your views here.
 def cadastro(request):
@@ -45,11 +48,9 @@ def plataforma(request):
     return HttpResponse('Você estar logado..')
 
 # class PasswordChangeDoneView(PasswordContextMixin, TemplateView):
-class PasswordChangeDoneView():
-    template_name = "registration/password_charge_done.html"
-    title = ("Password  change successful")
+class CustomPasswordResetView(PasswordResetView):
+    template_name = 'registration/password_reset_form.html'  # Template customizado
+    email_template_name = 'registration/password_reset_email.html'  # Email customizado (opcional)
+    success_url = reverse_lazy('password_reset_done')
+    form_class = CustomPasswordResetForm
 
-    # @method_decorator(login_required)
-    # def dispatch(self, *args. **kwargs):
-    #    return super().dispatch(*args, **kwargs)
-    
